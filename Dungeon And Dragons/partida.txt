@@ -1,0 +1,7 @@
+Oro: 294
+Mazmorra: 2
+Héroes:
+1,150,150,200,15,3,None
+2,90,100,25,10,0,None
+3,100,100,30,5,0,None
+Inventario:

@@ -1,0 +1,12 @@
+# creditos.txt
+
+=== Créditos ===
+
+Desarrolladores:
+- Flores Juan José
+- Franco Verdini
+
+Agradecimientos:
+- ChatGPT por asistencia en la generación de ideas y código.
+
+¡Gracias por jugar a Dungeon and Dragons!

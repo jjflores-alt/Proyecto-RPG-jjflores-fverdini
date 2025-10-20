@@ -1,0 +1,32 @@
+# tutorial.txt
+
+=== Tutorial de Dungeon and Dragons ===
+
+Bienvenido a Dungeon and Dragons, un roguelike por turnos donde lideras un equipo de héroes a través de mazmorras llenas de enemigos.
+
+1. Selección de Héroes:
+- Elige 3 héroes de entre 5 disponibles (Caballero, Arquera, Mago, Bárbaro, Clérigo).
+- Cada héroe tiene vida, ataque, defensa y un ataque especial único que se carga tras 3 turnos.
+
+2. Combate:
+- Los combates son por turnos, alternando entre un héroe y un enemigo.
+- Puedes atacar, usar un ataque especial (si está listo) o usar un item.
+- Cada mazmorra tiene 3 enemigos (excepto el Dragón, que es un jefe único).
+- La vida de los héroes persiste entre combates y mazmorras. Solo puedes restaurar vida con Pociones de Vida o la habilidad "Luz Divina" del Clérigo.
+
+3. Campamento:
+- Entre mazmorras, puedes visitar el campamento para:
+  - Comprar pociones, armas y armaduras.
+  - Vender almas de monstruo por oro.
+  - Equipar items a tus héroes (Poción de Vida restaura salud).
+  - Guardar la partida (costo en oro que se duplica cada vez).
+
+4. Progresión:
+- Avanza por 4 mazmorras, cada una con 3 enemigos más fuertes.
+- Derrota al Dragón en la última mazmorra para ganar.
+- Usa el oro y las almas de monstruo estratégicamente para mejorar tu equipo.
+
+5. Guardado:
+- Guarda tu progreso en el campamento, pero cuidado: ¡el costo en oro aumenta con cada guardado!
+
+¡Buena suerte, aventurero!
