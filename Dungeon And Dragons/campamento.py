@@ -34,8 +34,8 @@ def campamento(equipo, inventario, oro, mazmorra_actual, costo_guardado):
             #muestra una seccion para comprar items
             items_disponibles = crear_items_disponibles()
             print("Ítems disponibles para comprar:")
-            for i, item in enumerate(items_disponibles, 1):
-                print(f"{i}. {item.nombre} ({item.precio} oro)")
+            for contador, item in enumerate(items_disponibles, 1):
+                print(f"{contador}. {item.nombre} ({item.precio} oro)")
             try:
                 item_idx = int(input(f"Elige ítem (1-{len(items_disponibles)}): ")) - 1
                 item = items_disponibles[item_idx]
@@ -68,8 +68,8 @@ def campamento(equipo, inventario, oro, mazmorra_actual, costo_guardado):
                 print("Presiona Enter para volver al campamento.")
                 input()
             else:
-                for i, alma in enumerate(almas, 1):
-                    print(f"{i}. {alma.nombre}")
+                for contador, alma in enumerate(almas, 1):
+                    print(f"{contador}. {alma.nombre}")
                 print(f"{len(almas)+1}. Vender todas")
                 try:
                     opcion_vender = int(input(f"Elige opción (1-{len(almas)+1}): "))
@@ -99,16 +99,16 @@ def campamento(equipo, inventario, oro, mazmorra_actual, costo_guardado):
             limpiar_pantalla()
             #perimte equipar los objetos comprados al heroe
             print("Héroes:")
-            for i, heroe in enumerate(equipo, 1):
-                print(f"{i}. {heroe.nombre}")
+            for contador, heroe in enumerate(equipo, 1):
+                print(f"{contador}. {heroe.nombre}")
             try:
                 heroe_idx = int(input(f"Elige héroe (1-{len(equipo)}): ")) - 1
                 heroe = equipo[heroe_idx]
                 limpiar_pantalla()
                 print(f"Equipar ítems para {heroe.nombre}:")
                 print("Ítems en inventario:")
-                for i, item in enumerate(inventario, 1):
-                    print(f"{i}. {item.nombre}")
+                for contador, item in enumerate(inventario, 1):
+                    print(f"{contador}. {item.nombre}")
                 item_idx = int(input(f"Elige ítem (1-{len(inventario)}): ")) - 1
                 usar_item(inventario[item_idx], heroe)
                 limpiar_pantalla()
@@ -148,4 +148,5 @@ def campamento(equipo, inventario, oro, mazmorra_actual, costo_guardado):
             print("Opción inválida.")
             print("Presiona Enter para volver al campamento.")
             input()
+
 
