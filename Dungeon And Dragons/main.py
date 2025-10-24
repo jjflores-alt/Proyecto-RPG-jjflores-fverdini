@@ -33,8 +33,8 @@ def main():
                 limpiar_pantalla()
                 print(f"\nElige héroe {len(equipo)+1}/3:")
                 print("Héroes disponibles:")
-                for i, heroe in enumerate(heroes_disponibles, 1):
-                    print(f"{i}. {heroe.nombre} (Vida: {heroe.vida_max}, Ataque: {heroe.get_ataque()}, Defensa: {heroe.get_defensa()})")
+                for contador, heroe in enumerate(heroes_disponibles, 1):
+                    print(f"{contador}. {heroe.nombre} (Vida: {heroe.vida_max}, Ataque: {heroe.get_ataque()}, Defensa: {heroe.get_defensa()})")
                 try:
                     idx = int(input(f"Elige héroe (1-{len(heroes_disponibles)}): ")) - 1
                     if idx < 0 or idx >= len(heroes_disponibles):
@@ -58,7 +58,7 @@ def main():
             costo_guardado = 10
 
             # Flujo de mazmorras
-            while mazmorra_actual <= 4 and any(h.esta_vivo() for h in equipo):
+            while mazmorra_actual <= 4 and any(heroes.esta_vivo() for heroes in equipo):
                 limpiar_pantalla()
                 print(f"\nEntrando en la Mazmorra {mazmorra_actual}")
                 enemigos = generar_enemigos(mazmorra_actual)
@@ -88,7 +88,7 @@ def main():
             if partida:
                 equipo, inventario, oro, mazmorra_actual = partida
                 costo_guardado = 10 * (2 ** max(0, mazmorra_actual - 1))
-                while mazmorra_actual <= 4 and any(h.esta_vivo() for h in equipo):
+                while mazmorra_actual <= 4 and any(heroes.esta_vivo() for heroes in equipo):
                     limpiar_pantalla()
                     print(f"\nEntrando en la Mazmorra {mazmorra_actual}")
                     enemigos = generar_enemigos(mazmorra_actual)
@@ -115,15 +115,15 @@ def main():
 
         elif opcion == "3":
             limpiar_pantalla()
-            with open("tutorial.txt", "r") as f:
-                print(f.read())
+            with open("tutorial.txt", "r") as file:
+                print(file.read())
             print("Presiona Enter para volver al menú.")
             input()
 
         elif opcion == "4":
             limpiar_pantalla()
-            with open("creditos.txt", "r") as f:
-                print(f.read())
+            with open("creditos.txt", "r") as file:
+                print(file.read())
             print("Presiona Enter para volver al menú.")
             input()
 
@@ -137,4 +137,5 @@ def main():
             input()
 
 if __name__ == "__main__":
+
     main()
