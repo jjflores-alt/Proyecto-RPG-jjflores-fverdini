@@ -13,20 +13,35 @@ def limpiar_pantalla():
 
 def mostrar_menu():
     limpiar_pantalla()
-    #muestra las distintas opciones que tomar
-    print("=== Dungeon and Dragons ===")
-    print("1. Jugar partida nueva")
-    print("2. Cargar partida")
-    print("3. Tutorial")
-    print("4. Créditos")
-    print("5. Salir")
+    print("""
+    === Dungeon and Dragons ===
+    1. Jugar partida nueva
+    2. Cargar partida
+    3. Tutorial
+    4. Créditos
+    5. Salir
+    """)
     return input("Elige una opción (1-5): ")
 
 def main():
     while True:
         opcion = mostrar_menu()
         if opcion == "1":
-            # Selección de héroes
+            print("""
+            === Dungeon and Drangons ===
+            En la antigua tierra de Leiva, la paz se ha roto.
+            Desde las montañas del norte, el temible Vharzum, el Dragón Carmesi, ha despertado de su letargo, extendiendo fuego y destryccion sobre el reino.
+
+            La criatura se oculta en lo mas profundo de la Mazmorra de las Cenizas, un laberinto de cuatro niveles construido por una civilizacion olvidada, donde la magia y la corrupcion se entrelazan.
+
+            Tres aventureros, movidos por el deber, la ambicion o la redencion, se adentran en sus oscuras profundidades. Allí deberán enfrentar horrores antiguos, superar pruebas dificiles y desafiar su propio destino.
+
+            Porque esta no es solo la lucha contra un dragon cualquiera...
+            Esta es una batalla por el destino mismo de Leiva.
+            """)
+            print("Presiona Enter para continuar.")
+            input()
+            
             heroes_disponibles = crear_heroes()
             equipo = []
             while len(equipo) < 3:
@@ -67,7 +82,20 @@ def main():
                 inventario.extend([Item(alma, "alma", 0, 0) for alma in almas if alma])
                 if not victoria:
                     limpiar_pantalla()
-                    print("Game Over.")
+                    print("""
+                    GAME OVER
+                    En la antigua tierra de Leiva, la esperanza se extinguío.
+                    El rugido de Vharzum, el Dragón Carmesí, resonó por ultima vez sobre los campos ardientes, marcando el fin de toda resistencia.
+
+                    Los tres aventureros que descendieron a la Mazmorra de las Cenizas jamás regresaron.
+                    Sus cuerpos quedaron perdidos entre los escombros de una civilizacion maldita, y con ellos se desvaneció la ultima chispa de valor del reino.
+
+                    Las aldeas fueron consumidas por el fuego, las montañas se agrietaron, y el cielo se tornó rojo como la sangre misma.
+                    Leiva cayó en el olvido, convertida en un desierto de cenizas donde solo el eco del Dragó aún respira.
+
+                    Porque cuando los héroes caen, no solo mueren los hombres...
+                    Mueren también las leyendas
+                    """)
                     print("Presiona Enter para volver al menú.")
                     input()
                     break
@@ -79,7 +107,20 @@ def main():
                 mazmorra_actual += 1
             if mazmorra_actual > 4:
                 limpiar_pantalla()
-                print("¡Felicidades! Has derrotado al Dragón y completado el juego.")
+                print("""
+                En la antigua tierra de Leiva, la oscuridad fue finalmente vencida.
+                Tras descender a las profundidades de la Mazmorra de Cenizas, los tres aventureros enfrentaron horrores inimaginables y superaron cada nivel con valor y determinacion.
+
+                En el corazón del abismo aguardaba Vharzum, el Dragon Carmesí, envuelto en llamas y furia. Con su caída, el reino de Leiva renació.
+                Los campos volvieron a florecer, las campanas resonaron en cada aldea, y la paz regresó al pueblo.
+
+                Las hazañas de los héroes se convirtieron el leyenda...
+                aunque los sabios murmuran que, bajo las ruinas,
+                el mal nunca desaparece del todo.
+
+                Porque incluso en tiempos de luz,
+                la oscuridad siempre aguarda su momento para volver.
+                """)
                 print("Presiona Enter para volver al menú.")
                 input()
 
@@ -97,7 +138,21 @@ def main():
                     inventario.extend([Item(alma, "alma", 0, 0) for alma in almas if alma])
                     if not victoria:
                         limpiar_pantalla()
-                        print("Game Over.")
+                        print("""
+                        GAME OVER
+                        En la antigua tierra de Leiva, la esperanza se extinguío.
+                        El rugido de Vharzum, el Dragón Carmesí, resonó por ultima vez sobre los campos ardientes, marcando el fin de toda resistencia.
+                        
+                        Los tres aventureros que descendieron a la Mazmorra de las Cenizas jamás regresaron.
+                        Sus cuerpos quedaron perdidos entre los escombros de una civilizacion maldita, y con ellos se desvaneció la ultima chispa de valor del reino.
+                        
+                        Las aldeas fueron consumidas por el fuego, las montañas se agrietaron, y el cielo se tornó rojo como la sangre misma.
+                        Leiva cayó en el olvido, convertida en un desierto de cenizas donde solo el eco del Dragó aún respira.
+                        
+                        Porque cuando los héroes caen, no solo mueren los hombres...
+                        Mueren también las leyendas
+                        """)
+                        
                         print("Presiona Enter para volver al menú.")
                         input()
                         break
@@ -109,7 +164,20 @@ def main():
                     mazmorra_actual += 1
                 if mazmorra_actual > 4:
                     limpiar_pantalla()
-                    print("¡Felicidades! Has derrotado al Dragón y completado el juego.")
+                    print("""
+                En la antigua tierra de Leiva, la oscuridad fue finalmente vencida.
+                Tras descender a las profundidades de la Mazmorra de Cenizas, los tres aventureros enfrentaron horrores inimaginables y superaron cada nivel con valor y determinacion.
+
+                En el corazón del abismo aguardaba Vharzum, el Dragon Carmesí, envuelto en llamas y furia. Con su caída, el reino de Leiva renació.
+                Los campos volvieron a florecer, las campanas resonaron en cada aldea, y la paz regresó al pueblo.
+
+                Las hazañas de los héroes se convirtieron el leyenda...
+                aunque los sabios murmuran que, bajo las ruinas,
+                el mal nunca desaparece del todo.
+
+                Porque incluso en tiempos de luz,
+                la oscuridad siempre aguarda su momento para volver.
+                """)
                     print("Presiona Enter para volver al menú.")
                     input()
 
@@ -139,3 +207,4 @@ def main():
 if __name__ == "__main__":
 
     main()
+
