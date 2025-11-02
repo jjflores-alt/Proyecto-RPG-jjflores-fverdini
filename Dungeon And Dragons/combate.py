@@ -134,7 +134,7 @@ def combate(equipo, enemigos, inventario):
         print("¡Victoria! Has derrotado a todos los enemigos.")
 
                 # Recompensa de experiencia por victoria
-        xp_ganada = 50  # puedes ajustar este valor o calcularlo según los enemigos derrotados
+        xp_ganada = 100  # puedes ajustar este valor o calcularlo según los enemigos derrotados
         print(f"\nCada héroe gana {xp_ganada} puntos de experiencia.")
         
         for heroe in equipo:
@@ -154,3 +154,4 @@ def combate(equipo, enemigos, inventario):
         input()
 
         return False, drops_oro, drops_almas
+
