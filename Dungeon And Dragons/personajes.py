@@ -18,9 +18,9 @@ class Heroe:
     def subir_nivel(self):
         self.nivel += 1
         self.experiencia_necesaria = int(self.experiencia_necesaria * 1.25)
-        self.vida_max += 10
-        self.ataque_base += 2
-        self.defensa_base += 1
+        self.vida_max += 30
+        self.ataque_base += 6
+        self.defensa_base += 3
         self.vida_actual = self.vida_max
         print(f"🎉 {self.nombre} sube al nivel {self.nivel}! Sus estadísticas han aumentado.")
 
@@ -74,4 +74,5 @@ def crear_heroes():
         Heroe("Asesino", 80, 25, 10, "Corte Profundo", "Un corte profundo que ignora la defensa del enemigo"),
         Heroe("Clérigo", 110, 15, 12, "Luz Divina", "Invoca luz sagrada que daña al enemigo y cura al clérigo")
     ]
+
     return heroes
